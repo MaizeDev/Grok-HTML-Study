@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自我介绍</title>
+
+    <!-- 这里开始加 CSS! -->
+    <style>
+        /* 改变页面,文字颜色 , 设置字体, 去掉外边距,增加内边距 */
+        body {
+            /* 背景颜色*/
+            background-color: #f0f8ff;
+            /* 设置字体 */
+            font-family: "Microsoft YaHei", sans-serif;
+            /* 文字颜色 */
+            color: #333;
+            /* 去掉白边 */
+            margin: 0;
+            /* 内边距 */
+            padding: 0;
+            /* 行间距稍微大一些, 更舒服 */
+            line-height: 1.6;
+        }
+
+        header {
+            /* 给头部背景色加一点浅灰底色 */
+            background-color: #ecf0f1;
+            /* 文字居中 */
+            padding: 20px;
+            text-align: center;
+            /* 加一条蓝色分割 加上底部边框线 */
+            border-bottom: 4px solid #3498db;
+        }
+
+        /* 让大标题变红色 + 居中 */
+        h1 {
+            /* 标题颜色 */
+            color: #e74c3c;
+            /* 去掉默认上下边距 */
+            margin: 0;
+        }
+
+        /* 让导航菜单看起来像按钮 */
+        nav ul {
+            /* 去掉小圆点 */
+            list-style: none;
+            /* 去掉内边距 */
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        nav li {
+            /* 让列表横排*/
+            display: inline-block;
+            /* 每个链接之间有点距离*/
+            margin: 0;
+        }
+
+        /* a 标签文字处理 */
+        nav a {
+            /* 去掉下划线 */
+            text-decoration: none;
+            /* 设置颜色: 深灰蓝 */
+            color: #2c3e50;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: all 0.3s;
+        }
+
+        /* 鼠标悬停变色 */
+        nav a:hover {
+            background-color: #3498db;
+            /* 颜色设置 */
+            color: white;
+            border-radius: 25px;
+        }
+
+        main {
+            /* 添加背景色方便查看显示边界效果 */
+            /* background-color: #9eeea6; */
+            /* 内容区域最大宽度, 防止太宽 */
+            max-width: 960px;
+            /* 自动左右居中 */
+            margin: 40px auto;
+            /* 增加左右内边距 */
+            padding: 0 25px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,2);
+        }
+
+        /* 所有小标题变蓝色 */
+        h2 {
+            /* 标题颜色  */
+            color: #3498db;
+            /* 底部边框显示一条实线 solid */
+            border-bottom: 2px solid #3498db;
+            /* 单独设置下放内边距 */
+            padding-bottom: 8px;
+            margin: 0;
+        }
+
+
+        /* 设置图片样式 */
+        img {
+            /* 锁定图片, 独占一行 */
+            display: block;
+            /* 图片居中 */
+            margin: 20px auto;
+            max-width: 100%;
+            /* 添加圆角边框 */
+            border-radius: 25px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+            /* 轻微阴影，更立体 */
+        }
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* 隔行变色 */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* 悬停高亮 */
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+
+
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #ecf0f1;
+            margin-top: 50px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 页面头部 -->
+    <header>
+        <h1>阿明的个人主页</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="contact.html">联系我</a></li>
+                <li><a href="#hobby">我的爱好</a></li>
+                <li><a href="#stu-plan">学习计划</a></li>
+                <li><a href="#like-web">我喜欢的网站</a></li>
+                <li><a href="#stu-progress">学习进度表</a></li>
+                <li><a href="#like-movies">喜欢的电影</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 主要内容 -->
+    <main>
+        <!-- 关于我 -->
+        <section id="about">
+            <h2>关于我</h2>
+            <p>我是阿明, 一个从零开始学习 HTML 的新人.</p>
+            <img src="Awata.jpg" alt="头像" width="200">
+        </section>
+
+        <!-- 我的爱好 -->
+        <section id="hobby">
+            <h2>我的爱好</h2>
+            <p>我喜欢<strong>学习</strong>, <br>喜欢<em>三天打鱼,两天晒网.</em> </p>
+            <ul>
+                <li>学习</li>
+                <li>看书</li>
+                <li>练字</li>
+                <li>跑步</li>
+            </ul>
+        </section>
+
+        <!-- 学习计划 -->
+        <section id="stu-plan">
+            <h2>学习计划</h2>
+            <p>根据<strong>Grok</strong>的学习计划进行学习. </p>
+            <ol>
+                <li>HTML 基础结构和内容</li>
+                <li>表单与交互</li>
+                <li>页面布局进阶</li>
+                <li>小项目整合 + CSS 入门梅美化</li>
+            </ol>
+        </section>
+
+        <!-- 我喜欢的网站 -->
+        <section id="like-web">
+            <h2>我喜欢的网站</h2>
+            <ul>
+                <li><a href="http://www.google.com">Google</a></li>
+                <li><a href="http://www.youtube.com">Youtube</a></li>
+                <li><a href="http://www.instagram.com">Instagram</a></li>
+            </ul>
+        </section>
+
+        <!-- 学习进度表 -->
+        <section id="stu-progress">
+            <h2>学习进度表</h2>
+            <table>
+                <tr>
+                    <th>日期</th>
+                    <th>学习内容</th>
+                    <th>完成情况</th>
+                </tr>
+                <tr>
+                    <td>2026-01-01</td>
+                    <td>HTML 基本结构</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-02</td>
+                    <td>常用文字标签</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-03</td>
+                    <td>列表标签</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-04</td>
+                    <td>超链接</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-05</td>
+                    <td>图片标签</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-06</td>
+                    <td>表格</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-07</td>
+                    <td> 语义化标签</td>
+                    <td>✅ 已完成</td>
+                </tr>
+            </table>
+        </section>
+
+
+        <!-- 喜欢的电影 -->
+        <section id="like-movies">
+            <h2>喜欢的电影</h2>
+            <table>
+                <tr>
+                    <th>电影名称</th>
+                    <th>评分</th>
+                </tr>
+                <tr>
+                    <td>《肖申克的救赎》</td>
+                    <td>9.5</td>
+                </tr>
+                <tr>
+                    <td>《阿甘正传》</td>
+                    <td>9.5</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2026 阿明 | 谢谢参观我的主页！</p>
+    </footer>
+</body>
+
+</html>

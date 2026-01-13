@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自我介绍</title>
+
+    <!-- 这里开始加 CSS! -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: "Microsoft YaHei", sans-serif;
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ecf0f1;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 4px solid #3498db;
+        }
+
+        h1 {
+            color: #de0606;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: all 0.3s;
+            /* 鼠标悬停时有平滑过渡 */
+        }
+
+        nav a:hover {
+            background-color: #3498db;
+            color: white;
+            border-radius: 25px;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            /* 轻微阴影，更立体 */
+        }
+
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            /* 图片不会超出容器 */
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        footer {
+            background-color: #ecf0f1;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 页面头部 -->
+    <header>
+        <h1>阿明的个人主页</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="contact.html">联系我</a></li>
+                <li><a href="#hobby">我的爱好</a></li>
+                <li><a href="#stu-plan">学习计划</a></li>
+                <li><a href="#like-web">我喜欢的网站</a></li>
+                <li><a href="#stu-progress">学习进度表</a></li>
+                <li><a href="#btf-pictures">美女图片</a></li>
+                <li><a href="#like-movies">喜欢的电影</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 主要内容 -->
+    <main>
+        <!-- 关于我 -->
+        <section id="about">
+            <h2>关于我</h2>
+            <p>我是阿明, 一个从零开始学习 HTML 的新人.</p>
+            <img src="Awata.jpg" alt="头像" width="200">
+        </section>
+
+        <!-- 我的爱好 -->
+        <section id="hobby">
+            <h2>我的爱好</h2>
+            <p>我喜欢<strong>学习</strong>, <br>喜欢<em>三天打鱼,两天晒网.</em> </p>
+            <ul>
+                <li>学习</li>
+                <li>看书</li>
+                <li>练字</li>
+                <li>跑步</li>
+            </ul>
+        </section>
+
+        <!-- 学习计划 -->
+        <section id="stu-plan">
+            <h2>学习计划</h2>
+            <p>根据<strong>Grok</strong>的学习计划进行学习. </p>
+            <ol>
+                <li>HTML 基础结构和内容</li>
+                <li>表单与交互</li>
+                <li>页面布局进阶</li>
+                <li>小项目整合 + CSS 入门梅美化</li>
+            </ol>
+        </section>
+
+        <!-- 我喜欢的网站 -->
+        <section id="like-web">
+            <h2>我喜欢的网站</h2>
+            <ul>
+                <li><a href="http://www.google.com">Google</a></li>
+                <li><a href="http://www.youtube.com">Youtube</a></li>
+                <li><a href="http://www.instagram.com">Instagram</a></li>
+            </ul>
+        </section>
+
+        <!-- 学习进度表 -->
+        <section id="stu-progress">
+            <h2>学习进度表</h2>
+            <table>
+                <tr>
+                    <th>日期</th>
+                    <th>学习内容</th>
+                    <th>完成情况</th>
+                </tr>
+                <tr>
+                    <td>2026-01-01</td>
+                    <td>HTML 基本结构</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-02</td>
+                    <td>常用文字标签</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-03</td>
+                    <td>列表标签</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-04</td>
+                    <td>超链接</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-05</td>
+                    <td>图片标签</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-06</td>
+                    <td>表格</td>
+                    <td>✅ 已完成</td>
+                </tr>
+                <tr>
+                    <td>2026-01-07</td>
+                    <td> 语义化标签</td>
+                    <td>✅ 已完成</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 美女图片 -->
+        <section id="btf-pictures">
+            <h2>美女图片</h2>
+            <table>
+                <tr>
+                    <th>图片</th>
+                    <th>模特</th>
+                </tr>
+                <tr>
+                    <td><img src="1.png" alt="桜井宁宁" width="500"></td>
+                    <td><em>桜井宁宁</em></td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 喜欢的电影 -->
+        <section id="like-movies">
+            <h2>喜欢的电影</h2>
+            <table>
+                <tr>
+                    <th>电影名称</th>
+                    <th>评分</th>
+                </tr>
+                <tr>
+                    <td>《肖申克的救赎》</td>
+                    <td>9.5</td>
+                </tr>
+                <tr>
+                    <td>《阿甘正传》</td>
+                    <td>9.5</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2026 阿明 | 谢谢参观我的主页！</p>
+    </footer>
+</body>
+
+</html>

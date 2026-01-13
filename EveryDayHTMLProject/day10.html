@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿明的进阶留言板</title>
+</head>
+<body>
+    <h1>欢迎给我留言～</h1>
+    
+    <form action="" method="get">
+        <!-- 基本信息 -->
+        <p>
+            <label for="name">你的名字：</label>
+            <input type="text" id="name" name="name" placeholder="请填写你的名字">
+        </p>
+
+        <!-- 单选按钮 -->
+        <p>你的性别：</p>
+        <label><input type="radio" name="gender" value="male"> 男</label>
+        <label><input type="radio" name="gender" value="female"> 女</label>
+        <label><input type="radio" name="gender" value="other"> 其他</label>
+
+        <!-- 多选框 -->
+        <p>你喜欢哪些兴趣爱好？（可多选）</p>
+        <label><input type="checkbox" name="hobby" value="music"> 听音乐</label><br>
+        <label><input type="checkbox" name="hobby" value="sport"> 运动</label><br>
+        <label><input type="checkbox" name="hobby" value="game"> 玩游戏</label><br>
+        <label><input type="checkbox" name="hobby" value="read"> 阅读</label>
+
+        <!-- 下拉菜单 -->
+        <p>
+            <label for="color">你最喜欢的颜色是？</label>
+            <select id="color" name="color">
+                <option value="">请选择...</option>
+                <option value="red">红色</option>
+                <option value="blue">蓝色</option>
+                <option value="green">绿色</option>
+                <option value="yellow">黄色</option>
+            </select>
+        </p>
+
+        <!-- 留言 -->
+        <p>
+            <label for="message">想对我说的话：</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" placeholder="随便聊聊～"></textarea>
+        </p>
+
+        <p>
+            <button type="submit">提交留言</button>
+            <button type="reset">清空重填</button>
+        </p>
+    </form>
+
+    <hr>
+    <p>谢谢你来玩～提交后内容会显示在地址栏（以后我们会让它更酷！）</p>
+</body>
+</html>

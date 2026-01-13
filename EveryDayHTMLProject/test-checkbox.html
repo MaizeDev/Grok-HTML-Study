@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多选框 value 演示</title>
+</head>
+<body>
+    <h2>你最想看什么内容? (可多选) </h2>
+
+    <form action="" method="get">
+        <!-- 用户看到的是标签文字, 但提交的是 value 的值 -->
+        <label>
+            <input type="checkbox" name="wantsee" value="study"> 学习心得
+        </label><br>
+        <label>
+            <input type="checkbox" name="wantsee" value="daily"> 日常趣事
+        </label><br>
+        <label>
+            <input type="checkbox" name="wantsee" value=" question"> 结束问题
+        </label><br>
+
+        <button type="submit">提交</button>
+    </form>
+    <p>提交后，看地址栏：会看到类似 wantsee=study&wantsee=daily 这样的内容</p>
+</body>
+</html>

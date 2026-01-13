@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>label 的正确写法</title>
+</head>
+<body>
+    <h2>试试点击下面的文字，看输入框会不会亮起来～</h2>
+
+    
+    <form action="">
+        <!-- 推荐写法：用 for 和 id 关联（最清晰、最常用） -->
+        <label for="myname">你的名字：</label>
+        <input type="text" id="myname" name="username" placeholder="请输入名字">
+    
+        <br><br>
+    
+        <!-- 另一种写法：把 input 包在 label 里面（不需要写 for 和 id） -->
+        <label>
+            你的年龄：
+            <input type="number" name="age" placeholder="请输入年龄">
+        </label>
+    
+        <p>注意：上面两种 label 都不需要写 name，只有 input 才需要 name。</p>
+        <button type="submit">提交看看</button>
+    </form>
+</body>
+</html>

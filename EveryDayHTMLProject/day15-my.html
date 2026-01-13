@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XX 主页</title>
+
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: "Microsoft YaHei", sans-serif;
+            color: #333;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #ecf0f1;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 5px solid #3498db;
+        }
+
+        h1 {
+            color: crimson;
+            margin: 0;
+        }
+
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3498db;
+            color: white;
+            border-radius: 25px;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        section ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 16px;
+            margin: 20px 0 0;
+        }
+
+        section li {
+            padding: 0 10px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+        }
+        th {
+            background-color: #fad8d8;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        footer {
+            background-color: #ecf0f1;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>XX 主页</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="contact.html">联系我</a></li>
+                <li><a href="#hobby">我的爱好</a></li>
+                <li><a href="#study">学习进度</a></li>
+                <li><a href="#photos">我的照片</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>关于我</h2>
+            <p>欢迎来到我的个人主页</p>
+            <img src="Awata.jpg" alt="头像" width="200">
+        </section>
+
+        <section id="hobby">
+            <h2>我的爱好</h2>
+            <p>没什么爱好,下面都是凑数的...</p>
+
+            <ul>
+                <li>学习</li>
+                <li>看书</li>
+                <li>练字</li>
+                <li>跑步</li>
+            </ul>
+        </section>
+
+        <section id="study">
+            <h2>学习进度</h2>
+
+            <table>
+                <tr>
+                    <th>日 期</th>
+                    <th>学习内容</th>
+                    <th>完成情况</th>
+                    <th>测试数据</th>
+                </tr>
+
+                <tr>
+                    <td>2026-01-11</td>
+                    <td>HTML 基本结构</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-12</td>
+                    <td>常用文字标签</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-13</td>
+                    <td>列表标签</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-14</td>
+                    <td>超链接</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-15</td>
+                    <td>图片标签</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-16</td>
+                    <td>表格</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-17</td>
+                    <td> 语义化标签</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="photos">
+            <h2>我的照片</h2>
+            <ul>
+                <li><img src="1.png" alt="桜井宁宁" width="400"></li>
+                <li><img src="2.png" alt="桜井宁宁" width="400"></li>
+                <li><img src="3.png" alt="桜井宁宁" width="400"></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 XX | 谢谢参观我的主页！</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿明留言板 - 优化版</title>
+</head>
+
+<body>
+    <p><a href="index.html">← 返回主页</a></p>
+
+    <h1>欢迎给我留言~</h1>
+    <p>很开心收到你的消息! 请尽量填写完整哦~</p>
+
+    <form action="" method="get">
+        <!-- 个人信息分组 -->
+        <fieldset>
+            <legend>你的基本信息</legend>
+
+            <p>
+                <label for="name">你的名字(必填): </label>
+                <input type="text" name="name" id="name" placeholder="请输入你的名字" required>
+            </p>
+
+            <p>
+                <label for="email">你的邮箱 (必选): </label>
+                <input type="email" name="email" id="email" placeholder="example@email.com" required>
+            </p>
+        </fieldset>
+
+        <!-- 如何认识我 -->
+        <fieldset>
+            <legend>你是怎么认识我的? </legend>
+            <label><input type="radio" name="howknow" id="friend"> 朋友推荐</label><br>
+            <label><input type="radio" name="howknow" id="search"> 搜索到的</label><br>
+            <label><input type="radio" name="howknow" id="other"> 其他</label>
+        </fieldset>
+
+        <!-- 想看什么内容 -->
+        <fieldset>
+            <legend>你最想看我分享什么? (可多选) </legend>
+            <labeL><input type="checkbox" name="wantsee" value="study"> 学习心得</labeL>
+            <labeL><input type="checkbox" name="wantsee" value="daily"> 日常趣事</labeL>
+            <labeL><input type="checkbox" name="wantsee" value="question"> 技术问题解答</labeL>
+            <labeL><input type="checkbox" name="wantsee" value="other"> 其他</labeL>
+        </fieldset>
+
+        <!-- 评分 -->
+        <p>
+            <label for="score">给我的主页打几分? </label>
+            <select name="score" id="score" required>
+                <option value="">请选择...</option>
+                <option value="5">5星 - 超棒!</option>
+                <option value="4">4星 - 很好</option>
+                <option value="3">3星 - 还不错</option>
+                <option value="2">2星 - 可以更好</option>
+                <option value="1">1星 - 需要加油</option>
+            </select>
+        </p>
+
+        <!-- 留言 -->
+         <fieldset>
+            <legend>想对我说的话</legend>
+            <textarea name="message" id="message" rows="6", cols="50" placeholder="随便聊聊吧~" required></textarea>
+         </fieldset>
+         
+        <p>
+            <button type="button">提交留言</button>
+            <button type="reset">全部清空</button>
+        </p>
+    </form>
+
+    <hr>
+    <p>谢谢你来留言! （提交后会显示在地址栏，以后我们会让它真正发送出去～）</p>
+</body>
+
+</html>

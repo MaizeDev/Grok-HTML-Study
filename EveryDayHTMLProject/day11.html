@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系阿明 - 留言板</title>
+</head>
+<body>
+    <!-- 返回主页链接 -->
+    <p><a href="index.html">← 返回主页</a></p>
+
+    <h1>欢迎给我留言～</h1>
+    <p>很开心能收到你的消息！随便写写吧～</p>
+
+    <form action="" method="get">
+        <!-- 基本信息 -->
+        <p>
+            <label for="name">你的名字：</label>
+            <input type="text" id="name" name="name" placeholder="请填写你的名字" required>
+        </p>
+
+        <p>
+            <label for="email">你的邮箱：</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </p>
+
+        <!-- 单选按钮 -->
+        <fieldset>
+            <legend>你是怎么认识我的？</legend>
+            <label><input type="radio" name="howknow" value="friend"> 朋友推荐</label><br>
+            <label><input type="radio" name="howknow" value="search"> 搜索到的</label><br>
+            <label><input type="radio" name="howknow" value="other"> 其他</label>
+        </fieldset>
+
+        <!-- 多选框 -->
+        <fieldset>
+            <legend>你最想让我分享什么？（可多选）</legend>
+            <label><input type="checkbox" name="wantsee" value="study"> 学习心得</label>
+            <label><input type="checkbox" name="wantsee" value="daily"> 日常趣事</label>
+            <label><input type="checkbox" name="wantsee" value="question"> 技术问题解答</label>
+            <label><input type="checkbox" name="wantsee" value="other"> 其他</label>
+        </fieldset>
+
+        <!-- 下拉菜单 -->
+        <p>
+            <label for="score">你给我的主页打几分？</label>
+            <select id="score" name="score">
+                <option value="">请选择...</option>
+                <option value="5">5星 - 超棒！</option>
+                <option value="4">4星 - 很好</option>
+                <option value="3">3星 - 还不错</option>
+                <option value="2">2星 - 可以更好</option>
+                <option value="1">1星 - 需要加油</option>
+            </select>
+        </p>
+
+        <!-- 留言 -->
+        <p>
+            <label for="message">想对我说的话：</label><br>
+            <textarea id="message" name="message" rows="6" cols="50" placeholder="随便聊聊吧～" required></textarea>
+        </p>
+
+        <p>
+            <button type="submit">提交留言</button>
+            <button type="reset">清空重填</button>
+        </p>
+    </form>
+
+    <hr>
+    <p>谢谢你花时间留言！（目前提交会显示在地址栏，以后我们会让它更酷～）</p>
+
+    <!-- 返回主页 -->
+    <p><a href="index.html">← 返回主页</a></p>
+</body>
+</html>

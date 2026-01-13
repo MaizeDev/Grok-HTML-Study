@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿明的个人主页</title>
+
+    <!-- 这里开始加 CSS! -->
+     <style>
+        /* 改变整个页面颜色 */
+        body {
+            background-color: #f0f8ff; /* 浅浅的蓝色, 像天空 */
+            font-family: "Microsoft YaHei", sans-serif; /* 换成更舒服的中文字体 */
+            color:#333; /* 文字颜色变深灰, 更好看 */
+            margin: 0; /* 去掉页面默认的白边 */
+            padding: 20px; /* 内容边框有点距离 */
+        }
+
+        /* 让大标题变红色 + 居中 */
+        h1 {
+            color: #e74c3c; /* 漂亮的红色 */
+            text-align: center; /* 文字居中 */
+        }
+
+        /* 所有小标题变蓝色 */
+        h2 {
+            color: #3498db;
+        }
+
+        /* 让导航菜单看起来像按钮 */
+        nav ul {
+            list-style: none; /* 去掉小圆点 */
+            padding: 0; /* 去掉内边距 */
+            text-align: center;  /* 文字居中 */
+        }
+        nav li {
+            display: inline-block; /* 让列表横排*/
+            margin: 0 15px; /* 每个链接之间有点距离*/
+        }
+
+        nav a {
+            text-decoration: none; /* 去掉下划线 */
+            color:#2c3e50; /* 颜色: 深灰蓝 */
+            font-weight: bold;/* 加粗 */
+        }
+        nav a:hover {
+            color: #e74c3c; /* 鼠标悬停变红 */
+        }
+     </style>
+</head>
+
+<body>
+    <!-- 头部: 大标题 + 导航 -->
+    <header>
+        <h1>阿明的个人主页</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#hobby">我的爱好</a></li>
+            <li><a href="contact.html">联系我</a></li>
+            <li><a href="#progress">学习进度</a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- 主要内容区 -->
+    <main>
+        <!-- 关于我 -->
+        <section id="about">
+            <h2>关于我</h2>
+            <p>大家好! 我是阿明, 正在从零开始学习前端.</p>
+            <img src="Awata.jpg" alt="我的头像" width="200">
+        </section>
+
+        <!-- 爱好 -->
+        <section id="hobby">
+            <h2>我的爱好</h2>
+            <ul>
+                <li>学习前端</li>
+                <li>看书</li>
+                <li>跑步</li>
+            </ul>
+        </section>
+
+
+        <!-- 学习进度 (示例表格) -->
+        <section id="progress">
+            <h2>学习进度表</h2>
+            <table>
+                <tr>
+                    <th>天数</th>
+                    <th>内容</th>
+                    <th>完成</th>
+                </tr>
+                <tr>
+                    <td>Day 1-12</td>
+                    <td>HTML 基础 + 表单</td>
+                    <td>✅</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>持续学习中，每天进步一点点～</p>
+        <hr>
+        <p>© 2026 阿明 | 谢谢你来参观我的小网站！</p>
+    </footer>
+</body>
+
+</html>
