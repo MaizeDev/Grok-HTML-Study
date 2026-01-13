@@ -44,16 +44,18 @@
 
         /* 让导航菜单看起来像按钮 */
         nav ul {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
             /* 去掉小圆点 */
             list-style: none;
             /* 去掉内边距 */
             padding: 0;
             margin: 20px 0 0;
+            gap: 30px;
         }
 
         nav li {
-            /* 让列表横排*/
-            display: inline-block;
             /* 每个链接之间有点距离*/
             margin: 0;
         }
@@ -159,7 +161,28 @@
             background-color: #e8f4f8;
         }
 
+        .flex-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin: 40px 0;
+        }
 
+        .card {
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+            padding: 25px;
+            width: 250px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+        }
 
         footer {
             text-align: center;
@@ -184,6 +207,7 @@
                 <li><a href="#like-web">我喜欢的网站</a></li>
                 <li><a href="#stu-progress">学习进度表</a></li>
                 <li><a href="#like-movies">喜欢的电影</a></li>
+                <li><a href="#cards">卡片</a></li>
             </ul>
         </nav>
     </header>
@@ -296,6 +320,27 @@
                 </tr>
             </table>
         </section>
+
+        <!-- 卡片 -->
+         <div class="flex-cards" id="cards">
+            <div class="card">
+                <h3>卡片 1</h3>
+                <p>这里是简介信息</p>
+                <img src="1.png" alt="示例图片"  width="400">
+            </div>
+
+            <div class="card">
+                <h3>卡片 2</h3>
+                <p>这里是简介信息</p>
+                <img src="2.png" alt="示例图片"  width="400">
+            </div>
+
+            <div class="card">
+                <h3>卡片 3</h3>
+                <p>这里是简介信息</p>
+                <img src="3.png" alt="示例图片"  width="400">
+            </div>
+         </div>
     </main>
 
     <!-- 页脚 -->
