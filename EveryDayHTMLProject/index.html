@@ -115,7 +115,6 @@
             margin: 0;
         }
 
-
         /* 设置图片样式 */
         img {
             /* 锁定图片, 独占一行 */
@@ -129,6 +128,7 @@
             transition: all 0.3s ease;
             /* 轻微阴影，更立体 */
         }
+
         img:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(0,0,0,0.18);
@@ -175,13 +175,42 @@
             box-shadow: 0 6px 15px rgba(0,0,0,0.12);
             padding: 25px;
             width: 250px;
-            text-align: center;
+            /* text-align: center; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 420px;
             transition: all 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+        }
+
+        .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #3498db;
+        }
+
+        .card p {
+            margin: 0;
+            color: #555;
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
 
         footer {
@@ -324,20 +353,26 @@
         <!-- 卡片 -->
          <div class="flex-cards" id="cards">
             <div class="card">
-                <h3>卡片 1</h3>
-                <p>这里是简介信息</p>
+                <div class="card-content">
+                    <h3>卡片 1</h3>
+                    <p>这里是简介信息</p>
+                </div>
                 <img src="1.png" alt="示例图片"  width="400">
             </div>
 
             <div class="card">
-                <h3>卡片 2</h3>
-                <p>这里是简介信息</p>
+                <div class="card-content">
+                    <h3>卡片 2</h3>
+                    <p>这里是简介信息</p>
+                </div>
                 <img src="2.png" alt="示例图片"  width="400">
             </div>
 
             <div class="card">
-                <h3>卡片 3</h3>
-                <p>这里是简介信息</p>
+                <div class="card-content"></div>
+                    <h3>卡片 3</h3>
+                    <p>这里是简介信息</p>
+                </div>  
                 <img src="3.png" alt="示例图片"  width="400">
             </div>
          </div>
