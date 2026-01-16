@@ -10,6 +10,7 @@
     <style>
         /* 改变页面,文字颜色 , 设置字体, 去掉外边距,增加内边距 */
         body {
+            padding-top: 200px;     /* 顶部距离 */
             /* 背景颜色*/
             background-color: #f0f8ff;
             /* 设置字体 */
@@ -18,13 +19,15 @@
             color: #333;
             /* 去掉白边 */
             margin: 0;
-            /* 内边距 */
-            padding: 0;
             /* 行间距稍微大一些, 更舒服 */
             line-height: 1.6;
         }
 
         header {
+            position: fixed; /* 固定在顶部 */
+            top: 0;
+            left: 0;
+            right: 0;
             /* 给头部背景色加一点浅灰底色 */
             background-color: #ecf0f1;
             /* 文字居中 */
@@ -32,6 +35,10 @@
             text-align: center;
             /* 加一条蓝色分割 加上底部边框线 */
             border-bottom: 4px solid #3498db;
+            padding-bottom: 30px;
+            z-index: 1000; /* 层叠 */
+            /* 添加阴影 */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         /* 让大标题变红色 + 居中 */
@@ -220,6 +227,71 @@
             margin-top: 50px;
             color: #7f8c8d;
         }
+
+        /* 汉堡菜单图标 */
+        .hamburger {
+            display: none;                  /* 默认隐藏,只在手机端显示 */
+            font-size: 2em;                 /* 大小 */
+            cursor: pointer;                /* 鼠标悬停时变成手型 */
+            color: #333;
+        }
+
+        /* 手机端有样式 */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;             /* 显示 */
+                position: absolute;         /* 固定位置 */           
+                top: 20px;                  /* 顶部20px */
+                right: 20px;                /* 右侧20px */            
+            }
+            body {
+                padding-top: 50px;         /* 添加顶部导航栏高度 */
+            }
+            header {
+                padding: 10px;              /* 添加顶部导航栏高度 */
+            }
+            nav ul {
+                display: none;              /* 隐藏 */
+                position: absolute;         /* 固定位置 */     
+                top: 80px;                  /* 顶部80px */
+                left: 0;                    /* 左侧0px */
+                right: 0;                   /* 右侧0px */  
+                background-color: #ecf0f1;/* 背景色 */
+                flex-direction: column;     /* 竖排 */
+                padding: 20px;              /* 内边距20px */
+                box-shadow: 0 4px 12px rgba(0,0,0,0.12);  /* 阴影 */        
+            }
+            nav li {
+                margin: 10px 0;             /* 间隔10px */
+                width: 100%;                /* 宽度100% */
+                text-align: center;         /* 文字居中 */
+            }
+
+            /* 菜单打开时显示 */
+            #menu-toggle:checked ~ nav ul {     
+                display: flex;              /* 显示 */
+                
+
+            }
+            main {
+                margin-top: 60px;           /* 添加顶部导航栏高度 */         
+            }
+            .flex-cards {
+                flex-direction: colun;      /* 竖排 */
+                gap: 20px;                  /* 间隔28px */
+            }
+            .card {
+                width: 90%;                 /* 宽度90% */
+                margin: 0 auto;             /* 居中 */
+            }
+
+            /* 适配平板 */
+            @media (min-width: 769px) and (max-width: 1024px) {
+                .card {
+                    width: 45%;             /* 宽度45% */
+                }
+            }
+        }
     </style>
 </head>
 
@@ -227,6 +299,10 @@
     <!-- 页面头部 -->
     <header>
         <h1>阿明的个人主页</h1>
+
+        <!-- 汉堡菜单图标 -->
+        <label for="menu-toggle" class="hamburger">☰</label>
+        <input type="checkbox" id="menu-toggle" hidden>
         <nav>
             <ul>
                 <li><a href="#about">关于我</a></li>
@@ -369,7 +445,7 @@
             </div>
 
             <div class="card">
-                <div class="card-content"></div>
+                <div class="card-content">
                     <h3>卡片 3</h3>
                     <p>这里是简介信息</p>
                 </div>  

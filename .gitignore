@@ -76,3 +76,72 @@ out/
 1.png
 2.png
 3.png
+
+# =========================
+# Xcode / iOS / macOS 开发
+# =========================
+# Xcode 用户相关
+# =========================
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# =========================
+# Xcode 构建产物
+# =========================
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# =========================
+# Swift / Xcode 临时文件
+# =========================
+.swiftpm/
+Package.resolved
+*.swp
+*.orig
+
+# =========================
+# Playground
+# =========================
+timeline.xctimeline
+playground.xcworkspace
+
+# =========================
+# Swift Package Manager
+# =========================
+.build/
+Packages/
+
+# =========================
+# CocoaPods
+# =========================
+Pods/
+Podfile.lock
+
+# =========================
+# Carthage
+# =========================
+Carthage/Build/
+
+# =========================
+# Fastlane
+# =========================
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# =========================
+# macOS 应用相关
+# =========================
+*.app
+*.pkg
+*.dmg
+
+# =========================
+# 模拟器数据（如不需要版本控制）
+# =========================
+*.xcresult
