@@ -54,9 +54,7 @@
             display: flex; 
             justify-content: center; 
             align-items: center;
-            /* 去掉小圆点 */
             list-style: none;
-            /* 去掉内边距 */
             padding: 0;
             margin: 20px 0 0;
             gap: 30px;
@@ -231,35 +229,36 @@
         /* 汉堡菜单图标 */
         .hamburger {
             display: none;                  /* 默认隐藏,只在手机端显示 */
-            font-size: 2em;                 /* 大小 */
+            font-size: 2.2em;                 /* 大小 */
             cursor: pointer;                /* 鼠标悬停时变成手型 */
-            color: #333;
+            color: #3498db;                 /* 颜色 */
+            position: absolute;             /* 绝对定位 */
+            top: 12px;                      /* 顶部25px */
+            right: 25px;                    /* 右侧25px */
         }
 
         /* 手机端有样式 */
         @media (max-width: 768px) {
             .hamburger {
                 display: block;             /* 显示 */
-                position: absolute;         /* 固定位置 */           
-                top: 20px;                  /* 顶部20px */
-                right: 20px;                /* 右侧20px */            
             }
             body {
-                padding-top: 50px;         /* 添加顶部导航栏高度 */
+                padding-top: 80px;         /* 添加顶部导航栏高度 */
             }
             header {
                 padding: 10px;              /* 添加顶部导航栏高度 */
             }
             nav ul {
                 display: none;              /* 隐藏 */
+                flex-direction: column;     /* 竖排 */
                 position: absolute;         /* 固定位置 */     
                 top: 80px;                  /* 顶部80px */
                 left: 0;                    /* 左侧0px */
                 right: 0;                   /* 右侧0px */  
                 background-color: #ecf0f1;/* 背景色 */
-                flex-direction: column;     /* 竖排 */
-                padding: 20px;              /* 内边距20px */
+                padding: 30px 20px ;              /* 内边距20px */
                 box-shadow: 0 4px 12px rgba(0,0,0,0.12);  /* 阴影 */        
+                gap: 20px;
             }
             nav li {
                 margin: 10px 0;             /* 间隔10px */
@@ -270,8 +269,6 @@
             /* 菜单打开时显示 */
             #menu-toggle:checked ~ nav ul {     
                 display: flex;              /* 显示 */
-                
-
             }
             main {
                 margin-top: 60px;           /* 添加顶部导航栏高度 */         

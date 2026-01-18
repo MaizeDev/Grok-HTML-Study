@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿明的个人主页</title>
+
+    <style>
+        :root {
+            --primary: #3498db;
+            --accent: #e74c3c;
+            --bg-light: #f0f8ff;
+            --card-bg: white;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom, var(--bg-light), #d9f0ff);
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(236, 240, 241, 0.95);
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        h1 {
+            color: var(--accent);
+            text-align: center;
+            margin: 0;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2.2em;
+            cursor: pointer;
+            color: var(--primary);
+            position: absolute;
+            top: 25px;
+            right: 25px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 35px;
+            margin: 15px 0 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: var(--primary);
+            color: white;
+            border-radius: 25px;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+        }
+
+        .flex-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            padding: 25px;
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background: linear-gradient(to right, var(--primary), #2980b9);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        footer {
+            background: #ecf0f1;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            color: #7f8c8d;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 手机端响应式 */
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background: rgba(236,240,241,0.98); padding: 30px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+            #menu-toggle:checked ~ nav ul { display: flex; }
+            body { padding-top: 80px; }
+            .card { width: 95%; padding: 20px; min-height: 380px; }
+            .flex-cards { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>阿明的个人主页</h1>
+        <label for="menu-toggle" class="hamburger">☰</label>
+        <input type="checkbox" id="menu-toggle" hidden>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#hobby">我的爱好</a></li>
+                <li><a href="contact.html">联系我</a></li>
+                <li><a href="#progress">学习进度</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>关于我</h2>
+            <p>大家好！我是阿明，从零开始学习前端开发，已经坚持 25 天了！</p>
+            <img src="Awata.jpg" alt="我的头像" width="220">
+        </section>
+
+        <div class="flex-cards">
+            <div class="card">
+                <h3>我的爱好</h3>
+                <p>学习前端、看书、跑步、听音乐</p>
+                <a href="#" class="btn">了解更多</a>
+            </div>
+
+            <div class="card">
+                <h3>学习进度</h3>
+                <p>已经掌握 HTML + CSS 基础，响应式布局也完成了！</p>
+                <a href="#progress" class="btn">查看详情</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 阿明 | 谢谢你来看我的小世界！💙</p>
+        <p>从零开始，坚持就是胜利！</p>
+    </footer>
+
+</body>
+</html>

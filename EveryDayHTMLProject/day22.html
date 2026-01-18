@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XX 主页</title>
+
+    <style>
+        body {
+            padding-top: 200px;/* 根据你的 header 高度调整，大概 100px 就够 */
+            background: linear-gradient(to bottom, #f0f8ff, #e6f2ff); /* 渐变背景 */
+            min-height: 100vh; /* 至少占满一屏 */
+            font-family: "Micorsoft YaHei", sans-serif;
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed; /* 关键! 让header 固定在顶部 */
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(236, 240, 241, 0.95); /* 半透明背景，滚页面更有层次感 */
+            padding: 30px;
+            z-index: 1000; /* 层叠 确保它在最上层 ,不会遮挡内容 */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 加一点阴影, 更明显    */
+            transition: all 0.3s ease;
+        }
+
+        h1 {
+            color: #e74c3c;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* 汉堡菜单图标 (默认隐藏) */
+        .hamburger {
+            display: none;
+            font-size: 2.5em;
+            cursor: pointer;
+            color: #3498db;
+            position: absolute;
+            top: 8px;
+            right: 25px;
+        }
+
+
+        nav ul {
+            display: flex;  /* 弹性布局 */
+            justify-content: center; /* 水平居中 */
+            align-items: center;    /* 垂直居中 */
+            list-style: none;   /* 去掉默认的列表样式 */
+            padding: 0;         /* 去掉默认的 ul 间隔 */
+            margin: 20px 0 0;   /* 添加一个间距  */         
+            gap: 30px;          /* 间隔 每个 li 之间自动间距 */
+        }
+
+        nav a {
+            text-decoration: none;  /* 去掉默认的链接样式 */
+            color: #2c3e50;     /* 链接颜色 */
+            font-weight: bold;  /* 加粗 */
+            padding: 8px 15px;  /* 添加一个间距 */
+            transition: all 0.3s;   /* 鼠标放上去会平滑过渡 */
+        }
+
+        nav a:hover {
+            background-color: #3498db;  /* 背景颜色 */
+            color: white;   /* 文字颜色 */
+            border-radius: 25px; /* 圆角 */
+        }
+
+        main {
+            max-width: 960px;   /* 最大宽度 */
+            margin: 40px auto;  /* 居中 */
+            padding: 0 25px;    /* 添加一个间距 */
+        }
+
+        section {
+            background-color: white;    /* 背景颜色 */
+            padding: 25px;  /* 添加一个间距 */
+            margin-bottom: 25px;    /* 添加一个下外边间距 */
+            border-radius: 25px;    /* 圆角 */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);     /* 添加阴影 */
+            /* 平滑过渡效果 */
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            /* 鼠标放在 section 上面 会向上抬起一点 */
+            transform: translateY(-8px);
+            /* 阴影加深 */
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 2);
+        }
+
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            /* 鼠标放上去请问放大 */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+            /* 隔行变色, 更好读 */
+        }
+
+        tr:hover {
+            background-color: #e8f4f8;
+            /* 悬停高亮 */
+        }
+
+        section ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+
+        }
+
+        section li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        .flex-cards {
+            display: flex;
+            flex-wrap: wrap; /* 自动换行, 手机上会竖排 */
+            gap: 30px;/* 卡片间距 */
+            justify-content: center;/* 水平居中 */
+            margin: 40px 0;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 250px;
+            /* 卡片固定宽度 */
+            display: flex;
+            flex-direction: column;
+            /* 内容从上到下排列 */
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-content {
+            flex-grow: 1;/* 内容区自动填充剩余空间 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* 标题在上, 按钮/文字在下 */
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #3498db;
+        }
+
+        .card p {
+            margin: 15px 0;
+            color: #555;
+        }
+
+        .card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            /* 图片自动裁剪填满, 不变形 */
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #ecf0f1;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            color: #7f8c8d;
+        }
+
+        /* 手机端样式 */
+        @media (max-width: 768px) { 
+            .hamburger {
+                display: block;     /* 显示 */
+                transition: transform 0.3s ease;
+            }
+
+            .hamburger:hover {
+                transform: rotate(90deg);
+            }
+
+            body {
+                padding-top: 80px;      /* header 变矮, body 上边距也小一点 */
+            }
+
+            header {
+                padding: 15px           /* 缩小顶部导航栏 头部变紧凑 */
+            }
+
+            nav ul {
+                display: none;          /* 隐藏 */
+                flex-direction: column; /* 垂直居中 导航从横排变为竖排 */
+                position: absolute;     /* 绝对定位 */
+                top: 80px;              /* 顶部导航栏高度 80px */
+                left: 0;                /* 左边距 0 */
+                right: 0;               /* 右边距 0 */    
+                background-color: rgba(236, 240, 241, 0.98);
+                padding: 30px 20px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                gap: 20px;              /* 间隔 每个 li 之间自动间距 */
+                animation: sideDown 0.4s ease-out;          /* 动画 */
+                transform-origin: top;
+            }
+
+            /* 点击汉堡菜单后显示 */
+            #menu-toggle:checked ~ nav ul {    
+                display: flex;  /* 显示 */
+            }
+            
+            nav li {
+                width: 100%;            /* 宽度 100% 每行菜单占满一行 */
+                text-align: center;     /* 文字居中 */
+            }
+            .flex-cards {
+                flex-direction: column; /* 垂直居中 卡片从横排变为竖排 */
+                gap: 20px;              /* 卡片间距 */
+            }
+            .card {
+                width: 95%;             /* 卡片宽度 90% */
+                padding: 25px 20px;     /* 卡片内间距 */
+                margin: 0 auto 30px;         /* 卡片居中 */
+            }
+
+            .card h3 {
+                font-size: 1.4em;             /* 标题字体大小 */
+            }
+
+            .card p {
+                font-size: 1.1em;             /* 正文页稍大, 容易阅读 */
+                line-height: 1.5;             /* 行高 行距拉开, 不挤*/
+            }
+
+            .flex-cards {
+                gap: 25px;                    /* 卡片间距 手机上距离少校,避免太散 */
+            }
+
+            /* 适配平板 */
+            @media (min-width: 769px) and (max-width: 1024px) {
+                .card {
+                    width: 45%;         /* 卡片宽度 45% */
+                }
+            }
+        }
+
+        /* 加一个简单动画（可选） */
+        @keyframes sideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>XX 主页</h1>
+
+        <!-- 汉堡菜单图标 -->
+         <label for="menu-toggle" class="hamburger">☰</label>
+         <input type="checkbox" id="menu-toggle" hidden>
+
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="contact.html">联系我</a></li>
+                <li><a href="#hobby">我的爱好</a></li>
+                <li><a href="#study">学习进度</a></li>
+                <li><a href="#photos">我的照片</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>关于我</h2>
+            <p>欢迎来到我的个人主页</p>
+            <img src="Awata.jpg" alt="头像" width="200">
+        </section>
+
+        <section id="hobby">
+            <h2>我的爱好</h2>
+            <p>没什么爱好,下面都是凑数的...</p>
+
+            <ul>
+                <li>学习</li>
+                <li>看书</li>
+                <li>练字</li>
+                <li>跑步</li>
+            </ul>
+        </section>
+
+        <section id="study">
+            <h2>学习进度</h2>
+
+            <table>
+                <tr>
+                    <th>日 期</th>
+                    <th>学习内容</th>
+                    <th>完成情况</th>
+                    <th>测试数据</th>
+                </tr>
+
+                <tr>
+                    <td>2026-01-11</td>
+                    <td>HTML 基本结构</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-12</td>
+                    <td>常用文字标签</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-13</td>
+                    <td>列表标签</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-14</td>
+                    <td>超链接</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-15</td>
+                    <td>图片标签</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-16</td>
+                    <td>表格</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+                <tr>
+                    <td>2026-01-17</td>
+                    <td> 语义化标签</td>
+                    <td>✅ 已完成</td>
+                    <td>OK</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="photos">
+            <h2>我的照片</h2>
+            <ul>
+                <li><img src="1.png" alt="桜井宁宁" width="400"></li>
+                <li><img src="2.png" alt="桜井宁宁" width="400"></li>
+                <li><img src="3.png" alt="桜井宁宁" width="400"></li>
+            </ul>
+        </section>
+
+        <div class="flex-cards">
+            <div class="card">
+                <div class="card-content">
+                    <h3>卡片 1</h3>
+                    <p>这里是简介信息</p>
+                </div>
+                <img src="1.png" alt="实例图片" width="400">
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>卡片 2</h3>
+                    <p>这个卡片内容会超级长啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊Flexbox 自动帮我排好</p>
+                </div>
+                <img src="2.png" alt="实例图片" width="400">
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>卡片 3</h3>
+                    <p>中等长度内容, 按钮会整齐贴底</p>
+                </div>
+                <img src="3.png" alt="实例图片" width="400"></img>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 XX | 谢谢参观我的主页！</p>
+    </footer>
+</body>
+
+</html>
